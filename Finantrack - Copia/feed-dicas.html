@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dicas do Finan | FinanTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Menu lateral -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">F</span>
+                <h2>Finan<span>Track</span></h2>
+            </div>
+
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <nav>
+                <a href="index.html" class="menu-item">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="transacoes.html" class="menu-item">
+                    <span>⇄</span> Transações
+                </a>
+
+                <a href="relatorios.html" class="menu-item">
+                    <span>▥</span> Relatórios
+                </a>
+
+                <a href="contas.html" class="menu-item">
+                    <span>▣</span> Contas
+                </a>
+
+                <a href="metas.html" class="menu-item">
+                    <span>◎</span> Metas financeiras
+                </a>
+
+                <a href="feed-dicas.html" class="menu-item active">
+                    <span>✦</span> Feed de Dicas
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="configuracoes.html" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+                <a href="login.html" class="menu-item" id="botao-sair">
+    <span>↪</span> Sair
+</a>
+                <p>FinanTrack © 2026</p>
+
+            </div>
+
+        </aside>
+
+        <!-- Conteúdo principal -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dicas do Finan</h1>
+                    <p>Conhecimento financeiro para cuidar melhor do seu dinheiro.</p>
+                </div>
+
+                <div class="profile">
+                    <span>DV</span>
+                </div>
+            </header>
+
+            <!-- Destaque principal -->
+
+            <section class="panel feed-intro">
+
+                <div>
+                    <span class="feed-label">EDUCAÇÃO FINANCEIRA</span>
+
+                    <h2>Pequenas atitudes, grandes conquistas.</h2>
+
+                    <p>
+                        Descubra dicas práticas para organizar suas finanças,
+                        economizar dinheiro e alcançar seus objetivos.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Carrossel de dicas -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Destaques do Finan</h2>
+                        <p>Confira nossas principais dicas financeiras.</p>
+                    </div>
+                </div>
+
+                <div class="feed-carousel" id="feed-carousel">
+
+                    <!-- Dica 1 -->
+
+                    <article class="feed-slide active">
+
+                        <img
+                            src="https://images.pexels.com/photos/4386339/pexels-photo-4386339.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                            alt="Pessoa organizando suas finanças com calculadora e caderno"
+                        >
+
+                        <div class="feed-slide-content">
+
+                            <span class="feed-label">ORGANIZAÇÃO</span>
+
+                            <h2>Planeje seu orçamento</h2>
+
+                            <p>
+                                Anote suas receitas e despesas para entender
+                                como seu dinheiro está sendo utilizado.
+                                Um bom planejamento ajuda a evitar gastos
+                                desnecessários.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Dica 2 -->
+
+                    <article class="feed-slide">
+
+                        <img
+                            src="https://images.pexels.com/photos/3833052/pexels-photo-3833052.jpeg?cs=srgb&dl=pexels-joslyn-pickens-2185980-3833052.jpg&fm=jpg"
+                            alt="Pessoa colocando uma moeda em um cofrinho transparente"
+                        >
+
+                        <div class="feed-slide-content">
+
+                            <span class="feed-label">ECONOMIA</span>
+
+                            <h2>Crie o hábito de poupar</h2>
+
+                            <p>
+                                Mesmo pequenas quantias podem fazer diferença
+                                ao longo do tempo. Estabeleça um valor mensal
+                                para guardar e acompanhe seu progresso.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Dica 3 -->
+
+                    <article class="feed-slide">
+
+                        <img
+                            src="https://images.pexels.com/photos/7054399/pexels-photo-7054399.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                            alt="Materiais utilizados para planejamento financeiro"
+                        >
+
+                        <div class="feed-slide-content">
+
+                            <span class="feed-label">PLANEJAMENTO</span>
+
+                            <h2>Defina objetivos financeiros</h2>
+
+                            <p>
+                                Estabeleça metas com valores e prazos definidos.
+                                Ter objetivos claros ajuda a manter a disciplina
+                                e acompanhar suas conquistas.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="feed-controls">
+
+                    <button
+                        type="button"
+                        id="feed-anterior"
+                        class="btn-secondary"
+                        aria-label="Mostrar dica anterior"
+                    >
+                        Anterior
+                    </button>
+
+                    <span id="feed-indicador" aria-live="polite">
+                        Dica 1 de 3
+                    </span>
+
+                    <button
+                        type="button"
+                        id="feed-proximo"
+                        class="btn-secondary"
+                        aria-label="Mostrar próxima dica"
+                    >
+                        Próxima
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- Cartões explicativos -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Aprenda mais</h2>
+                        <p>Conheça alguns fundamentos da organização financeira.</p>
+                    </div>
+                </div>
+
+                <div class="feed-cards">
+
+                    <article class="feed-card">
+                        <span class="feed-card-icon">◈</span>
+                        <h3>Controle de gastos</h3>
+                        <p>
+                            Acompanhe suas despesas e identifique
+                            oportunidades para economizar.
+                        </p>
+                    </article>
+
+                    <article class="feed-card">
+                        <span class="feed-card-icon">◎</span>
+                        <h3>Reserva de emergência</h3>
+                        <p>
+                            Organize uma reserva para lidar com
+                            imprevistos sem comprometer seu orçamento.
+                        </p>
+                    </article>
+
+                    <article class="feed-card">
+                        <span class="feed-card-icon">↗</span>
+                        <h3>Metas financeiras</h3>
+                        <p>
+                            Transforme seus objetivos em planos
+                            e acompanhe sua evolução.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Rodapé -->
+
+            <footer class="site-footer">
+    <p>FinanTrack © 2026 — Controle financeiro pessoal.</p>
+    <p>Organize seu dinheiro. Planeje seu futuro.</p>
+</footer>
+
+        </main>
+
+    </div>
+    <script src="script-configuracoes.js"></script>
+<script src="script-feed.js"></script>
+<script src="script-protecao.js"></script>
+</body>
+</html>

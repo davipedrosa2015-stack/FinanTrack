@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FinanTrack | Controle Financeiro</title>
+
+    <!-- Conexão com o CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MENU LATERAL -->
+        
+<aside class="sidebar">
+
+    <div class="logo">
+        <span class="logo-icon">F</span>
+        <h2>Finan<span>Track</span></h2>
+    </div>
+
+    <p class="menu-title">MENU PRINCIPAL</p>
+
+    <nav>
+        <a href="index.html" class="menu-item active">
+            <span>▦</span> Dashboard
+        </a>
+
+        <a href="transacoes.html" class="menu-item">
+            <span>⇄</span> Transações
+        </a>
+
+        <a href="relatorios.html" class="menu-item">
+    <span>▥</span> Relatórios
+</a>
+
+        <a href="contas.html" class="menu-item">
+            <span>▣</span> Contas
+        </a>
+
+        <a href="metas.html" class="menu-item">
+            <span>◎</span> Metas financeiras
+        </a>
+        <a href="feed-dicas.html" class="menu-item">
+    <span>✦</span> Feed de Dicas
+</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+
+    <a href="configuracoes.html" class="menu-item">
+        <span>⚙</span> Configurações
+    </a>
+
+    <a href="login.html" class="menu-item" id="botao-sair">
+        <span>↪</span> Sair
+    </a>
+
+    <p>FinanTrack © 2026</p>
+
+</div>
+
+</aside>
+
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Bem-vindo de volta! Aqui está seu resumo financeiro.</p>
+                </div>
+
+                <div class="user-profile">
+                    <div class="avatar">DV</div>
+                    <span>Meu perfil</span>
+                </div>
+            </header>
+
+
+            <!-- CARDS FINANCEIROS -->
+            <section class="cards">
+
+                <div class="card balance-card">
+                    <p>Saldo total</p>
+                    <h2 id="saldo">R$ 0,00</h2>
+                    <span class="card-description">Seu patrimônio registrado</span>
+                </div>
+
+                <div class="card">
+                    <p>Receitas</p>
+                    <h2 class="positive" id="receitas">R$ 0,00</h2>
+                    <span class="card-description">Total de entradas</span>
+                </div>
+
+                <div class="card">
+                    <p>Despesas</p>
+                    <h2 class="negative" id="despesas">R$ 0,00</h2>
+                    <span class="card-description">Total de saídas</span>
+                </div>
+
+            </section>
+
+
+<!-- GRÁFICO FINANCEIRO -->
+<section class="panel">
+
+    <div class="section-header">
+        <div>
+            <h2>Visão financeira</h2>
+            <p>Distribuição das suas movimentações.</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="graficoFinanceiro"></canvas>
+    </div>
+
+</section>
+    
+            <!-- CADASTRO DE TRANSAÇÕES -->
+            <section class="panel" id="transacoes">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Nova transação</h2>
+                        <p>Registre suas movimentações financeiras.</p>
+                    </div>
+                </div>
+
+                <form id="form-transacao">
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição</label>
+                        <input
+                            type="text"
+                            id="descricao"
+                            placeholder="Ex: Salário, mercado..."
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="valor">Valor (R$)</label>
+                        <input
+                            type="number"
+                            id="valor"
+                            placeholder="0,00"
+                            min="0.01"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo</label>
+                        <select id="tipo">
+                            <option value="receita">Receita</option>
+                            <option value="despesa">Despesa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+    <label for="categoria">Categoria</label>
+    <select id="categoria" required>
+        <option value="Alimentação">Alimentação</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Moradia">Moradia</option>
+        <option value="Saúde">Saúde</option>
+        <option value="Educação">Educação</option>
+        <option value="Lazer">Lazer</option>
+        <option value="Compras">Compras</option>
+        <option value="Outros">Outros</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="conta-transacao">Conta utilizada</label>
+    <select id="conta-transacao" required>
+        <option value="">Selecione uma conta</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="data-transacao">Data da movimentação</label>
+    <input
+        type="date"
+        id="data-transacao"
+        required
+    >
+</div>
+                    <button type="submit" class="btn-primary">
+                        + Adicionar transação
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- HISTÓRICO -->
+            <section class="panel">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Últimas transações</h2>
+                        <p>Acompanhe suas movimentações.</p>
+                    </div>
+                </div>
+
+                <div id="lista-transacoes">
+                    <p class="empty-message">
+                        Nenhuma transação cadastrada ainda.
+                    </p>
+                </div>
+
+            </section>
+
+            <footer class="site-footer">
+    <p>FinanTrack © 2026 — Controle financeiro pessoal.</p>
+    <p>Organize seu dinheiro. Planeje seu futuro.</p>
+</footer>
+
+        </main>
+
+    </div>
+
+    
+<!-- Conexão com o JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+<script src="script-configuracoes.js"></script>
+<script src="script-protecao.js"></script>
+</body>
+</html>

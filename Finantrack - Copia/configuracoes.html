@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configurações | FinanTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Menu lateral -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">F</span>
+                <h2>Finan<span>Track</span></h2>
+            </div>
+
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <nav>
+                <a href="index.html" class="menu-item">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="transacoes.html" class="menu-item">
+                    <span>⇄</span> Transações
+                </a>
+
+                <a href="relatorios.html" class="menu-item">
+                    <span>▥</span> Relatórios
+                </a>
+
+                <a href="contas.html" class="menu-item">
+                    <span>▣</span> Contas
+                </a>
+
+                <a href="metas.html" class="menu-item">
+                    <span>◎</span> Metas financeiras
+                </a>
+                <a href="feed-dicas.html" class="menu-item">
+    <span>✦</span> Feed de Dicas
+</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="configuracoes.html" class="menu-item active">
+                    <span>⚙</span> Configurações
+                </a>
+                <a href="login.html" class="menu-item" id="botao-sair">
+    <span>↪</span> Sair
+</a>
+                <p>FinanTrack © 2026</p>
+            </div>
+
+        </aside>
+
+        <!-- Conteúdo principal -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Configurações</h1>
+                    <p>Personalize sua experiência no FinanTrack.</p>
+                </div>
+
+                <div class="profile">
+                    <span>DV</span>
+                </div>
+            </header>
+
+            <!-- Aparência do sistema -->
+
+            
+<!-- Configuração de aparência -->
+
+<section class="panel">
+
+    <div class="panel-header">
+        <div>
+            <h2>Aparência</h2>
+            <p>Escolha o tema que combina com sua preferência.</p>
+        </div>
+    </div>
+
+    <div class="theme-options" role="group" aria-label="Escolher tema do sistema">
+
+        <button
+            type="button"
+            class="theme-option"
+            id="tema-claro"
+            data-theme-choice="claro"
+            aria-pressed="false"
+        >
+            <span class="theme-icon" aria-hidden="true">☀</span>
+            <strong>Modo claro</strong>
+            <small>Visualização clara e suave</small>
+        </button>
+
+        <button
+            type="button"
+            class="theme-option"
+            id="tema-escuro"
+            data-theme-choice="escuro"
+            aria-pressed="false"
+        >
+            <span class="theme-icon" aria-hidden="true">☾</span>
+            <strong>Modo escuro</strong>
+            <small>Visualização escura e confortável</small>
+        </button>
+
+    </div>
+
+</section>
+
+
+            
+
+<!-- Seção de contato -->
+
+<section class="panel">
+
+    <div class="panel-header">
+        <div>
+            <h2>Entre em contato</h2>
+            <p>Envie suas dúvidas, sugestões ou comentários.</p>
+        </div>
+    </div>
+
+    <form id="form-contato">
+
+        <div class="form-group">
+            <label for="contato-nome">Nome</label>
+            <input
+                type="text"
+                id="contato-nome"
+                placeholder="Digite seu nome"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="contato-email">E-mail</label>
+            <input
+                type="email"
+                id="contato-email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="contato-assunto">Assunto</label>
+            <input
+                type="text"
+                id="contato-assunto"
+                placeholder="Assunto da mensagem"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="contato-mensagem">Mensagem</label>
+            <textarea
+                id="contato-mensagem"
+                rows="5"
+                placeholder="Escreva sua mensagem..."
+                required
+            ></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Enviar mensagem
+        </button>
+
+        <p
+            id="retorno-contato"
+            role="status"
+            aria-live="polite"
+        ></p>
+
+    </form>
+
+</section>
+<!-- Informações do sistema -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Sobre o FinanTrack</h2>
+                        <p>Conheça um pouco mais sobre a plataforma.</p>
+                    </div>
+                </div>
+
+                <p>
+                    O FinanTrack é um sistema de gerenciamento financeiro
+                    pessoal desenvolvido para facilitar o controle de
+                    receitas, despesas, contas bancárias e metas financeiras.
+                </p>
+
+                <p style="margin-top: 15px; color: #94A3B8;">
+                    Projeto acadêmico de Ciência da Computação.
+                </p>
+
+            </section>
+<!-- Rodapé da página -->
+<footer class="site-footer">
+    <p>FinanTrack © 2026 — Controle financeiro pessoal.</p>
+    <p>Organize seu dinheiro. Planeje seu futuro.</p>
+</footer>
+        </main>
+
+    </div>
+
+    <script src="script-configuracoes.js"></script>
+    <script src="script-protecao.js"></script>
+</body>
+</html>

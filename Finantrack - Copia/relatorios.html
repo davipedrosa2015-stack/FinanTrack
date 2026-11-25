@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Relatórios | FinanTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Menu lateral -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">F</span>
+                <h2>Finan<span>Track</span></h2>
+            </div>
+
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <nav>
+                <a href="index.html" class="menu-item">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="transacoes.html" class="menu-item">
+                    <span>⇄</span> Transações
+                </a>
+
+                <a href="relatorios.html" class="menu-item active">
+                    <span>▥</span> Relatórios
+                </a>
+
+                <a href="contas.html" class="menu-item">
+                    <span>▣</span> Contas
+                </a>
+
+                <a href="metas.html" class="menu-item">
+                    <span>◎</span> Metas financeiras
+                </a>
+                <a href="feed-dicas.html" class="menu-item">
+    <span>✦</span> Feed de Dicas
+</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="configuracoes.html" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+                <a href="login.html" class="menu-item" id="botao-sair">
+    <span>↪</span> Sair
+</a>
+                <p>FinanTrack © 2026</p>
+            </div>
+
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Relatórios</h1>
+                    <p>Acompanhe sua evolução financeira.</p>
+                </div>
+
+                <div class="profile">
+                    <span>DV</span>
+                </div>
+            </header>
+
+            <!-- Filtro de período -->
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Período do relatório</h2>
+                        <p>Selecione o período que deseja analisar.</p>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <label class="sr-only" for="filtro-periodo">
+    Selecionar período dos relatórios
+</label>
+                    <select id="filtro-periodo">
+                        <option value="30">Últimos 30 dias</option>
+                        <option value="90">Últimos 3 meses</option>
+                        <option value="180">Últimos 6 meses</option>
+                        <option value="365">Último ano</option>
+                        <option value="todos">Todo o período</option>
+                    </select>
+
+                </div>
+
+            </section>
+
+            <!-- Indicadores -->
+            <section class="cards">
+
+                <div class="card">
+                    <p>Total de receitas</p>
+                    <h2 id="relatorio-receitas">R$ 0,00</h2>
+                </div>
+
+                <div class="card">
+                    <p>Total de despesas</p>
+                    <h2 id="relatorio-despesas">R$ 0,00</h2>
+                </div>
+
+                <div class="card">
+                    <p>Saldo do período</p>
+                    <h2 id="relatorio-saldo">R$ 0,00</h2>
+                </div>
+
+            </section>
+
+            <!-- Gráfico de evolução -->
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Evolução financeira</h2>
+                        <p>Comparação entre receitas e despesas.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                   <canvas
+    id="graficoEvolucao"
+    role="img"
+    aria-label="Gráfico de evolução das receitas e despesas ao longo do período selecionado"
+></canvas>
+                </div>
+
+            </section>
+
+            <!-- Categorias de despesas -->
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Categorias de despesas</h2>
+                        <p>Distribuição dos seus gastos.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas
+    id="graficoCategorias"
+    role="img"
+    aria-label="Gráfico de distribuição das despesas por categoria"
+></canvas>
+                </div>
+
+            </section>
+
+            <!-- Resumo geral -->
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Resumo geral</h2>
+                        <p id="resumo-geral">
+                            Cadastre transações para visualizar seu resumo financeiro.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+<!-- Rodapé da página -->
+<footer class="site-footer">
+    <p>FinanTrack © 2026 — Controle financeiro pessoal.</p>
+    <p>Organize seu dinheiro. Planeje seu futuro.</p>
+</footer>
+        </main>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script-relatorios.js"></script>
+<script src="script-configuracoes.js"></script>
+<script src="script-protecao.js"></script>
+</body>
+</html>

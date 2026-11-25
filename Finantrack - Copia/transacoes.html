@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transações | FinanTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- MENU LATERAL -->
+        
+<aside class="sidebar">
+
+    <div class="logo">
+        <span class="logo-icon">F</span>
+        <h2>Finan<span>Track</span></h2>
+    </div>
+
+    <p class="menu-title">MENU PRINCIPAL</p>
+
+    <nav>
+        <a href="index.html" class="menu-item">
+            <span>▦</span> Dashboard
+        </a>
+
+        <a href="transacoes.html" class="menu-item active">
+            <span>⇄</span> Transações
+        </a>
+
+        <a href="relatorios.html" class="menu-item">
+    <span>▥</span> Relatórios
+</a>
+
+        <a href="contas.html" class="menu-item">
+            <span>▣</span> Contas
+        </a>
+
+        <a href="metas.html" class="menu-item">
+            <span>◎</span> Metas financeiras
+        </a>
+        <a href="feed-dicas.html" class="menu-item">
+    <span>✦</span> Feed de Dicas
+</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="configuracoes.html" class="menu-item">
+            <span>⚙</span> Configurações
+        </a>
+        <a href="login.html" class="menu-item" id="botao-sair">
+    <span>↪</span> Sair
+</a>
+        <p>FinanTrack © 2026</p>
+    </div>
+
+</aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Transações</h1>
+                    <p>Gerencie suas receitas e despesas.</p>
+                </div>
+
+                <div class="profile">
+                    <span class="avatar">DV</span>
+                </div>
+
+            </header>
+
+            <!-- ÁREA DE CONTEÚDO -->
+            <section class="content">
+
+                <div class="panel">
+
+                    <div class="section-header">
+                        <div>
+                            <h2>Histórico de transações</h2>
+                            <p>Acompanhe todas as suas movimentações financeiras.</p>
+                        </div>
+                    </div>
+
+                    
+<div class="filters">
+
+    <label class="sr-only" for="pesquisa-transacao">
+        Pesquisar transações
+    </label>
+
+    <input
+        type="text"
+        id="pesquisa-transacao"
+        placeholder="Pesquisar transação..."
+    >
+
+    <label class="sr-only" for="filtro-tipo">
+        Filtrar por tipo de movimentação
+    </label>
+
+    <select id="filtro-tipo">
+        <option value="todos">Todas as movimentações</option>
+        <option value="receita">Receitas</option>
+        <option value="despesa">Despesas</option>
+    </select>
+
+    <label class="sr-only" for="filtro-data">
+        Filtrar transações por data
+    </label>
+
+    <input
+        type="date"
+        id="filtro-data"
+    >
+
+    <label class="sr-only" for="filtro-conta">
+        Filtrar por conta bancária
+    </label>
+
+    <select id="filtro-conta">
+        <option value="todos">Todas as contas</option>
+    </select>
+
+</div>
+
+
+<div id="lista-transacoes-completa">
+    <!-- As transações serão inseridas pelo JavaScript -->
+</div>
+
+                </div>
+
+            </section>
+<!-- Rodapé da página -->
+<footer class="site-footer">
+    <p>FinanTrack © 2026 — Controle financeiro pessoal.</p>
+    <p>Organize seu dinheiro. Planeje seu futuro.</p>
+</footer>
+        </main>
+
+    </div>
+
+    <script src="script-transacoes.js"></script>
+    <script src="script-configuracoes.js"></script>
+    <script src="script-protecao.js"></script>
+</body>
+</html>

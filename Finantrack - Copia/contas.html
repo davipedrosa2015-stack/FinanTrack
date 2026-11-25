@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas | FinanTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Menu lateral -->
+        
+<aside class="sidebar">
+
+    <div class="logo">
+        <span class="logo-icon">F</span>
+        <h2>Finan<span>Track</span></h2>
+    </div>
+
+    <p class="menu-title">MENU PRINCIPAL</p>
+
+    <nav>
+        <a href="index.html" class="menu-item">
+            <span>▦</span> Dashboard
+        </a>
+
+        <a href="transacoes.html" class="menu-item">
+            <span>⇄</span> Transações
+        </a>
+
+        <a href="relatorios.html" class="menu-item">
+    <span>▥</span> Relatórios
+</a>
+
+        <a href="contas.html" class="menu-item active">
+            <span>▣</span> Contas
+        </a>
+
+        <a href="metas.html" class="menu-item">
+    <span>◎</span> Metas financeiras
+</a>
+    <a href="feed-dicas.html" class="menu-item">
+    <span>✦</span> Feed de Dicas
+</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="configuracoes.html" class="menu-item">
+            <span>⚙</span> Configurações
+        </a>
+        <a href="login.html" class="menu-item" id="botao-sair">
+    <span>↪</span> Sair
+</a>
+        <p>FinanTrack © 2026</p>
+    </div>
+
+</aside>
+
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Minhas contas</h1>
+                    <p>Gerencie suas contas e acompanhe seus saldos.</p>
+                </div>
+
+                <div class="profile">
+                    <span>DV</span>
+                </div>
+            </header>
+
+            <!-- Resumo financeiro -->
+            <section class="cards">
+
+                <div class="card">
+                    <p>Saldo total</p>
+                    <h2 id="saldo-total">R$ 0,00</h2>
+                </div>
+
+                <div class="card">
+                    <p>Contas cadastradas</p>
+                    <h2 id="quantidade-contas">0</h2>
+                </div>
+
+            </section>
+
+            <!-- Cadastro de contas -->
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Adicionar conta</h2>
+                        <p>Cadastre uma conta bancária ou carteira.</p>
+                    </div>
+                </div>
+
+                <form id="form-conta">
+
+                    <div class="form-group">
+                        <label for="nome-conta">Nome da conta</label>
+                        <input
+                            type="text"
+                            id="nome-conta"
+                            placeholder="Ex: Nubank, Banco do Brasil..."
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo-conta">Tipo de conta</label>
+                        <select id="tipo-conta" required>
+                            <option value="">Selecione</option>
+                            <option value="Conta corrente">Conta corrente</option>
+                            <option value="Conta poupança">Conta poupança</option>
+                            <option value="Conta digital">Conta digital</option>
+                            <option value="Carteira">Dinheiro em espécie</option>
+                            <option value="Investimento">Investimento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="saldo-conta">Saldo inicial (R$)</label>
+                        <input
+                            type="number"
+                            id="saldo-conta"
+                            placeholder="0,00"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Adicionar conta
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Lista de contas -->
+            <section class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Minhas contas</h2>
+                        <p>Visualize e gerencie suas contas cadastradas.</p>
+                    </div>
+                </div>
+
+                <div id="lista-contas">
+                    <p>Nenhuma conta cadastrada.</p>
+                </div>
+
+            </section>
+<!-- Rodapé da página -->
+<footer class="site-footer">
+    <p>FinanTrack © 2026 — Controle financeiro pessoal.</p>
+    <p>Organize seu dinheiro. Planeje seu futuro.</p>
+</footer>
+        </main>
+
+    </div>
+<script src="script-contas.js"></script>
+<script src="script-configuracoes.js"></script>
+<script src="script-protecao.js"></script>
+</body>
+</html>
